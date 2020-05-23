@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func LengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubString(s string) int {
 	var Length int
 	var s1 string
 	left := 0
@@ -27,4 +27,12 @@ func LengthOfLongestSubstring(s string) int {
 
 	return Length
 
+}
+
+
+func TestLongestSubString() {
+	s := "ejaajeq"
+
+	maxl := LengthOfLongestSubString(s)
+	fmt.Println(maxl)
 }

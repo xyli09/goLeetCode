@@ -23,3 +23,11 @@ func Map2Struct() {
 	}
 	fmt.Print("map2struct后得到的 struct 内容为:%v", person)
 }
+
+
+func TestMap2Struct(){
+
+	s := []int{2, 3, 5, 7, 11, 13}
+
+	Map2Struct()
+}

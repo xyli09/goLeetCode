@@ -1,5 +1,7 @@
 package huiwen
 
+import "fmt"
+
 func max(nums ...int) int {
 	m := nums[0]
 	for _, n := range nums {
@@ -10,6 +12,7 @@ func max(nums ...int) int {
 	return m
 }
 
+//Palindrome 回文
 
 func LongestPalindromeSubseq(s string) int {
 	n := len(s)
@@ -35,4 +38,11 @@ func LongestPalindromeSubseq(s string) int {
 	}
 
 	return dp[0][n-1]
+}
+
+
+func TestHuiWen(){
+	s :="ejaajeq"
+	l:=LongestPalindromeSubseq(s)
+	fmt.Println(l)
 }
