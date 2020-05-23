@@ -1,24 +1,18 @@
 package main
 
-import (
-	"test/followup"
-	"test/huiwen"
-	"test/maxSubString"
-	"test/newecc"
-	"test/testGIN"
-)
-
+import "test/BigNumAdd"
 func main(){
 
 
 
 
 	//myconsul.ReadConsul()
-	testGIN.Request()
-	newecc.MyECC()
-	huiwen.TestHuiWen()
-	followup.TestFollow()
-	maxSubString.TestLongestSubString()
+	//testGIN.Request()
+	//newecc.MyECC()
+	//huiwen.TestHuiWen()
+	//followup.TestFollow()
+	//maxSubString.TestLongestSubString()
+	BigNumAdd.TestLinkNodeAdd()
 }
 
 

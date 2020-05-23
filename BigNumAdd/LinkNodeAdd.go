@@ -97,9 +97,10 @@ func (l *ListNode)reverseLink() *ListNode {
 		pre = l
 		l = next
 	}
-	l = pre
-	return l
-	//return pre
+
+	//l = pre
+
+	return pre
 }
 
 func (l *ListNode)readLink() {
@@ -111,24 +112,22 @@ func (l *ListNode)readLink() {
 	fmt.Println(result)
 }
 
-func (l *ListNode)myreverse(){
+func (l *ListNode)myreverse() *ListNode{
 	tmp := new(ListNode)
-	pre := l
-	pre.next = nil
-	cur := l.next
-	for cur != nil&& cur.next != nil {
-		if cur.next != nil{
-			tmp = cur.next
-			cur.next = pre
-			pre = cur
-			cur = tmp
-		}
+	var pre *ListNode
+	cur := l
+	for cur != nil {
+		tmp = cur.next  //拴住cur节点的next节点 防止丢失
+
+		cur.next = pre  //cur节点的next重指向到pre节点，完成翻转
+
+		pre = cur   //cur节点变成pre节点
+		cur = tmp   //拴住的临时节点成了当前节点
 	}
-	cur.next = pre
-	l = pre
+	return pre  //cur 节点 是 空节点
 }
 
-func testLinkNodeAdd()  {
+func TestLinkNodeAdd()  {
 	node7 := &ListNode{data:7,next:nil}
 	node6 := &ListNode{data:6,next:node7}
 	node5 := &ListNode{data:5,next:node6}
@@ -143,9 +142,12 @@ func testLinkNodeAdd()  {
 
 	//x := AddTwoNum(node1,node4)
 	node1.readLink()
-	//node1.reverseLink().readLink()
-	node4.myreverse()
 	node4.readLink()
+	//node1.reverseLink().readLink()
+
+	//node4.myreverse().readLink()
+	//node4.readLink()
+
 	node1.AddTwoNumLink(node4).readLink()
 	//fmt.Println(r)
 

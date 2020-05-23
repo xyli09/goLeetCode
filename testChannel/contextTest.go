@@ -1,12 +1,12 @@
 package testChannel
 
 import (
+	"context"
 	"fmt"
 	"time"
-	"context"
 )
 
-func testChan() {
+func TestChan() {
 	ctx, cancel := context.WithCancel(context.Background())
 	go func(ctx context.Context) {
 		for {
