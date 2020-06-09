@@ -42,7 +42,7 @@ func LongestPalindromeSubseq(s string) int {
 
 
 func TestHuiWen(){
-	s :="ejaajeq"
+	s :="ejaeajeq"
 	l:=LongestPalindromeSubseq(s)
 	fmt.Println(l)
 }

@@ -1,6 +1,8 @@
 package main
 
-import "test/BigNumAdd"
+import (
+	"test/testSlice"
+)
 func main(){
 
 
@@ -12,7 +14,11 @@ func main(){
 	//huiwen.TestHuiWen()
 	//followup.TestFollow()
 	//maxSubString.TestLongestSubString()
-	BigNumAdd.TestLinkNodeAdd()
+	//BigNumAdd.TestLinkNodeAdd()
+	//testChannelClose.TestChanClose()
+	//testChannelClose.TestChan2()
+	//xiaohongshu.TestFind()
+	testSlice.TestSliceAppend()
 }
 
 

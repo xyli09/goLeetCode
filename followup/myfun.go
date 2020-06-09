@@ -21,3 +21,5 @@ func TestFollow(){
 	data := []int{1, 0, 5, 0, 13,17}
 	follow(data)
 }
+
+
